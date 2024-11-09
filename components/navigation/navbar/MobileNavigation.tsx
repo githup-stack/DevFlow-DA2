@@ -1,5 +1,3 @@
-/* eslint-disable no-unused-vars */
-/* eslint-disable @typescript-eslint/no-unused-vars */
 import Image from "next/image";
 import Link from "next/link";
 
@@ -14,7 +12,6 @@ import {
   SheetTrigger,
 } from "@/components/ui/sheet";
 import ROUTES from "@/constants/routes";
-
 import NavLinks from "./NavLinks";
 
 const MobileNavigation = () => {
