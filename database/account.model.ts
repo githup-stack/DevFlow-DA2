@@ -1,14 +1,15 @@
-import { model, models, Schema, Types } from "mongoose";
+import { model, models, Schema, Types, Document } from "mongoose";
 
 export interface IAccount {
   userId: Types.ObjectId;
   name: string;
   image?: string;
-  password?: string; // Thuộc tính tuỳ chọn
-  provider: string; // Thuộc tính bắt buộc
+  password?: string;
+  provider: string;
   providerAccountId: string;
 }
 
+export interface IAccountDoc extends IAccount, Document {}
 const AccountSchema = new Schema<IAccount>(
   {
     userId: { type: Schema.Types.ObjectId, ref: "User", required: true },
@@ -19,7 +20,6 @@ const AccountSchema = new Schema<IAccount>(
     providerAccountId: { type: String, required: true },
   },
   { timestamps: true }
-  // Với { timestamps: true }, khi một tài liệu User mới được tạo, MongoDB sẽ tự động thêm createdAt và updatedAt. Nếu tài liệu được cập nhật sau đó, chỉ updatedAt sẽ được cập nhật với thời gian mới, trong khi createdAt vẫn giữ nguyên thời gian ban đầu.
 );
 
 const Account = models?.Account || model<IAccount>("Account", AccountSchema);
