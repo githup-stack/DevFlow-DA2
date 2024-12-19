@@ -6,7 +6,7 @@ import { ReloadIcon } from "@radix-ui/react-icons";
 import dynamic from "next/dynamic";
 import { useRouter } from "next/navigation";
 import React, { useRef, useTransition } from "react";
-import { Form, useForm } from "react-hook-form";
+import { useForm } from "react-hook-form";
 import { z } from "zod";
 
 import ROUTES from "@/constants/routes";
@@ -16,15 +16,16 @@ import { AskQuestionSchema } from "@/lib/validations";
 
 import TagCard from "../cards/TagCard";
 import { Button } from "../ui/button";
-import { Input } from "../ui/input";
 import {
+  Form,
+  FormControl,
+  FormDescription,
   FormField,
   FormItem,
   FormLabel,
-  FormControl,
-  FormDescription,
   FormMessage,
-} from "@/components/ui/form";
+} from "../ui/form";
+import { Input } from "../ui/input";
 
 const Editor = dynamic(() => import("@/components/editor"), {
   ssr: false,
