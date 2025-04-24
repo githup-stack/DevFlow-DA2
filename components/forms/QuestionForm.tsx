@@ -9,10 +9,13 @@ import React, { useRef, useTransition } from "react";
 import { useForm } from "react-hook-form";
 import { z } from "zod";
 
+import {
+  createQuestion,
+  editQuestion,
+} from "@/app/lib/actions/question.action";
+import { AskQuestionSchema } from "@/app/lib/validations";
 import ROUTES from "@/constants/routes";
 import { toast } from "@/hooks/use-toast";
-import { createQuestion, editQuestion } from "@/lib/actions/question.action";
-import { AskQuestionSchema } from "@/lib/validations";
 
 import TagCard from "../cards/TagCard";
 import { Button } from "../ui/button";
@@ -106,8 +109,7 @@ const QuestionForm = ({ question, isEdit = false }: Params) => {
             description: "Question updated successfully",
           });
 
-          if (result.data)
-            router.push(ROUTES.QUESTION(result.data._id as string));
+          if (result.data) router.push(ROUTES.QUESTION(result.data._id));
         } else {
           toast({
             title: `Error ${result.status}`,

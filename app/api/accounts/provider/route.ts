@@ -1,10 +1,10 @@
 import { NextResponse } from "next/server";
 
+import handleError from "@/app/lib/handlers/error";
+import { NotFoundError, ValidationError } from "@/app/lib/http-errors";
+import dbConnect from "@/app/lib/mongoose";
+import { AccountSchema } from "@/app/lib/validations";
 import Account from "@/database/account.model";
-import handleError from "@/lib/handlers/error";
-import { NotFoundError, ValidationError } from "@/lib/http-errors";
-import dbConnect from "@/lib/mongoose";
-import { AccountSchema } from "@/lib/validations";
 
 export async function POST(request: Request) {
   const { providerAccountId } = await request.json();

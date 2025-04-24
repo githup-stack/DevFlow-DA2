@@ -3,8 +3,8 @@
 import { useSearchParams, useRouter } from "next/navigation";
 import React, { useState } from "react";
 
-import { formUrlQuery, removeKeysFromUrlQuery } from "@/lib/url";
-import { cn } from "@/lib/utils";
+import { formUrlQuery, removeKeysFromUrlQuery } from "@/app/lib/url";
+import { cn } from "@/app/lib/utils";
 
 import { Button } from "../ui/button";
 

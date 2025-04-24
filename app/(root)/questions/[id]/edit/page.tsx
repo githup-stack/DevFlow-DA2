@@ -1,10 +1,10 @@
 import { notFound, redirect } from "next/navigation";
 import React from "react";
 
+import { getQuestion } from "@/app/lib/actions/question.action";
 import { auth } from "@/auth";
 import QuestionForm from "@/components/forms/QuestionForm";
 import ROUTES from "@/constants/routes";
-import { getQuestion } from "@/lib/actions/question.action";
 
 const EditQuestion = async ({ params }: RouteParams) => {
   const { id } = await params;
