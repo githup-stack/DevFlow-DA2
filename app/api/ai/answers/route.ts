@@ -2,9 +2,9 @@ import { openai } from "@ai-sdk/openai";
 import { generateText } from "ai";
 import { NextResponse } from "next/server";
 
-import handleError from "@/app/lib/handlers/error";
-import { ValidationError } from "@/app/lib/http-errors";
-import { AIAnswerSchema } from "@/app/lib/validations";
+import handleError from "@/lib/handlers/error";
+import { ValidationError } from "@/lib/http-errors";
+import { AIAnswerSchema } from "@/lib/validations";
 
 export async function POST(req: Request) {
   const { question, content, userAnswer } = await req.json();

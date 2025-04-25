@@ -1,10 +1,10 @@
 import { NextResponse } from "next/server";
 
-import handleError from "@/app/lib/handlers/error";
-import { ValidationError } from "@/app/lib/http-errors";
-import dbConnect from "@/app/lib/mongoose";
-import { UserSchema } from "@/app/lib/validations";
 import User from "@/database/user.model";
+import handleError from "@/lib/handlers/error";
+import { ValidationError } from "@/lib/http-errors";
+import dbConnect from "@/lib/mongoose";
+import { UserSchema } from "@/lib/validations";
 
 export async function GET() {
   try {

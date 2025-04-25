@@ -2,8 +2,6 @@
 
 import { useRouter, useSearchParams } from "next/navigation";
 
-import { formUrlQuery } from "@/app/lib/url";
-import { cn } from "@/app/lib/utils";
 import {
   Select,
   SelectItem,
@@ -12,6 +10,8 @@ import {
   SelectContent,
   SelectGroup,
 } from "@/components/ui/select";
+import { formUrlQuery } from "@/lib/url";
+import { cn } from "@/lib/utils";
 
 interface Filter {
   name: string;

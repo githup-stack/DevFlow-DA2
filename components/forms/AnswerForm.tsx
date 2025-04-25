@@ -19,9 +19,9 @@ import {
   FormMessage,
 } from "@/components/ui/form";
 import { toast } from "@/hooks/use-toast";
-import { createAnswer } from "@/app/lib/actions/answer.action";
-import { api } from "@/app/lib/api";
-import { AnswerSchema } from "@/app/lib/validations";
+import { createAnswer } from "@/lib/actions/answer.action";
+import { api } from "@/lib/api";
+import { AnswerSchema } from "@/lib/validations";
 
 const Editor = dynamic(() => import("@/components/editor"), {
   ssr: false,

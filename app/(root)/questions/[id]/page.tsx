@@ -3,11 +3,6 @@ import { redirect } from "next/navigation";
 import { after } from "next/server";
 import React, { Suspense } from "react";
 
-import { getAnswers } from "@/app/lib/actions/answer.action";
-import { hasSavedQuestion } from "@/app/lib/actions/collection.action";
-import { getQuestion, incrementViews } from "@/app/lib/actions/question.action";
-import { hasVoted } from "@/app/lib/actions/vote.action";
-import { formatNumber, getTimeStamp } from "@/app/lib/utils";
 import AllAnswers from "@/components/answers/AllAnswers";
 import TagCard from "@/components/cards/TagCard";
 import { Preview } from "@/components/editor/Preview";
@@ -17,6 +12,11 @@ import SaveQuestion from "@/components/questions/SaveQuestion";
 import UserAvatar from "@/components/UserAvatar";
 import Votes from "@/components/votes/Votes";
 import ROUTES from "@/constants/routes";
+import { getAnswers } from "@/lib/actions/answer.action";
+import { hasSavedQuestion } from "@/lib/actions/collection.action";
+import { getQuestion, incrementViews } from "@/lib/actions/question.action";
+import { hasVoted } from "@/lib/actions/vote.action";
+import { getTimeStamp, formatNumber } from "@/lib/utils";
 
 const QuestionDetails = async ({ params, searchParams }: RouteParams) => {
   const { id } = await params;
@@ -59,6 +59,7 @@ const QuestionDetails = async ({ params, searchParams }: RouteParams) => {
             <UserAvatar
               id={author._id}
               name={author.name}
+              imageUrl={author.image}
               className="size-[22px]"
               fallbackClassName="text-[10px]"
             />

@@ -2,8 +2,8 @@
 
 import { useRouter, useSearchParams } from "next/navigation";
 
-import { formUrlQuery } from "@/app/lib/url";
-import { cn } from "@/app/lib/utils";
+import { formUrlQuery } from "@/lib/url";
+import { cn } from "@/lib/utils";
 
 import { Button } from "./ui/button";
 

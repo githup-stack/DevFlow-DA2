@@ -4,9 +4,9 @@ import Image from "next/image";
 import { useSession } from "next-auth/react";
 import { use, useState } from "react";
 
-import { createVote } from "@/app/lib/actions/vote.action";
-import { formatNumber } from "@/app/lib/utils";
 import { toast } from "@/hooks/use-toast";
+import { createVote } from "@/lib/actions/vote.action";
+import { formatNumber } from "@/lib/utils";
 
 interface Params {
   targetType: "question" | "answer";

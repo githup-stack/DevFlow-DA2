@@ -4,8 +4,8 @@ import Image from "next/image";
 import { useSession } from "next-auth/react";
 import { use, useState } from "react";
 
-import { toggleSaveQuestion } from "@/app/lib/actions/collection.action";
 import { toast } from "@/hooks/use-toast";
+import { toggleSaveQuestion } from "@/lib/actions/collection.action";
 
 const SaveQuestion = ({
   questionId,

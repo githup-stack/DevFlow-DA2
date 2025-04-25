@@ -1,3 +1,4 @@
+/* eslint-disable tailwindcss/no-custom-classname */
 import { ReactNode } from "react";
 
 import LeftSidebar from "@/components/navigation/LeftSidebar";
@@ -7,8 +8,8 @@ import RightSidebar from "@/components/navigation/RightSidebar";
 const RootLayout = ({ children }: { children: ReactNode }) => {
   return (
     <main className="background-light850_dark100 realtive">
-      s
       <Navbar />
+
       <div className="flex">
         <LeftSidebar />
 

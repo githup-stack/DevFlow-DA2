@@ -1,3 +1,4 @@
+/* eslint-disable @typescript-eslint/no-require-imports */
 import type { Config } from "tailwindcss";
 
 const config: Config = {
@@ -28,6 +29,9 @@ const config: Config = {
           "800": "#F4F6F8",
           "850": "#FDFDFD",
           "900": "#FFFFFF",
+        },
+        link: {
+          "100": "#1DA1F2",
         },
       },
       boxShadow: {

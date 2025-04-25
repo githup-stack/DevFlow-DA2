@@ -1,5 +1,5 @@
-import Link from "next/link";
 import Image from "next/image";
+import Link from "next/link";
 
 interface Props {
   imgUrl: string;
@@ -17,6 +17,7 @@ const ProfileLink = ({ imgUrl, href, title }: Props) => {
           href={href}
           target="_blank"
           rel="noopener noreferrer"
+          // eslint-disable-next-line tailwindcss/no-custom-classname
           className="paragraph-medium text-link-100"
         >
           {title}

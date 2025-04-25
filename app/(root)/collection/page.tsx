@@ -1,4 +1,3 @@
-import { getSavedQuestions } from "@/app/lib/actions/collection.action";
 import QuestionCard from "@/components/cards/QuestionCard";
 import DataRenderer from "@/components/DataRenderer";
 import CommonFilter from "@/components/filters/CommonFilter";
@@ -7,6 +6,7 @@ import LocalSearch from "@/components/search/LocalSearch";
 import { CollectionFilters } from "@/constants/filters";
 import ROUTES from "@/constants/routes";
 import { EMPTY_QUESTION } from "@/constants/states";
+import { getSavedQuestions } from "@/lib/actions/collection.action";
 
 interface SearchParams {
   searchParams: Promise<{ [key: string]: string }>;
