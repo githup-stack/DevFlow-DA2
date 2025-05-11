@@ -1,12 +1,13 @@
+/* eslint-disable tailwindcss/no-custom-classname */
 import Link from "next/link";
 import { Suspense } from "react";
 
-import EditDeleteAction from "@/components/user/EditDeleteAction";
 import ROUTES from "@/constants/routes";
 import { hasVoted } from "@/lib/actions/vote.action";
 import { cn, getTimeStamp } from "@/lib/utils";
 
 import { Preview } from "../editor/Preview";
+import EditDeleteAction from "../user/EditDeleteAction";
 import UserAvatar from "../UserAvatar";
 import Votes from "../votes/Votes";
 
@@ -40,7 +41,6 @@ const AnswerCard = ({
       <span id={`answer-${_id}`} className="hash-span" />
 
       {showActionBtns && (
-        // eslint-disable-next-line tailwindcss/no-custom-classname
         <div className="background-light800 flex-center absolute -right-2 -top-5 size-9 rounded-full">
           <EditDeleteAction type="Answer" itemId={_id} />
         </div>

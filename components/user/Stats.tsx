@@ -23,7 +23,11 @@ const StatsCard = ({ imgUrl, value, title }: StatsCardProps) => {
 interface Props {
   totalQuestions: number;
   totalAnswers: number;
-  badges: BadgeCounts;
+  badges: {
+    GOLD: number;
+    SILVER: number;
+    BRONZE: number;
+  };
   reputationPoints: number;
 }
 

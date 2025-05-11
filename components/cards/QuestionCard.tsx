@@ -1,12 +1,12 @@
 import Link from "next/link";
 import React from "react";
 
-import EditDeleteAction from "@/components/user/EditDeleteAction";
 import ROUTES from "@/constants/routes";
 import { getTimeStamp } from "@/lib/utils";
 
 import TagCard from "./TagCard";
 import Metric from "../Metric";
+import EditDeleteAction from "../user/EditDeleteAction";
 
 interface Props {
   question: Question;

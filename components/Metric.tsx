@@ -1,9 +1,7 @@
-/* eslint-disable @typescript-eslint/no-unused-vars */
+import { cn } from "@/lib/utils";
 import Image from "next/image";
 import Link from "next/link";
 import React from "react";
-
-import { cn } from "@/lib/utils";
 
 interface Props {
   imgUrl: string;
